@@ -1,0 +1,26 @@
+{
+  "name": "vid-talk-earn-backend",
+  "version": "1.0.0",
+  "description": "this is a rest apis for video sevice app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chashikajw/vid-talk-earn-backend.git"
+  },
+  "author": "Chashika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chashikajw/vid-talk-earn-backend/issues"
+  },
+  "homepage": "https://github.com/chashikajw/vid-talk-earn-backend#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
