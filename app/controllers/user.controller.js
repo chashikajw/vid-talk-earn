@@ -3,11 +3,11 @@ const User = require('../models/user.model.js');
 // Create and Save a new User
 exports.create = (req, res) => {
     //Validate request
-    if(!req.body.content){
+    /*if(!req.body.content){
         return res.status(400).send({
             message:"User content cannot be empty"
         });
-    }
+    }*/
 
     //create an User
     const user = new User({
@@ -15,6 +15,7 @@ exports.create = (req, res) => {
         lastName: req.body.lastName || null,
         email: req.body.email,
         password: req.body.password
+     
     });
 
     //save User in the db
@@ -96,7 +97,7 @@ exports.update = (req, res) => {
         });
     });
 };
-};
+
 
 // Delete a user with the specified userId in the request
 exports.delete = (req, res) => {

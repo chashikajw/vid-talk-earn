@@ -17,6 +17,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 //connecting to db
+
 mongoose.connect(dbConfig.url,{
     useNewUrlParser:true
 }).then(()=>{
@@ -35,6 +36,6 @@ app.get('/', (req, res) => {
 require('./app/routes/user.routes.js')(app);
 
 // listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(3008, () => {
+    console.log("Server is listening on port 3008");
 });
