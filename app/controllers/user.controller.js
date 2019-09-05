@@ -1,14 +1,22 @@
 const User = require('../models/user.model.js');
-const bcrypt = require('bcrypt');
+
 
 // Create and Save a new User
 exports.create = (req, res) => {
     //Validate request
-    /*if(!req.body.content){
+    if(!req.body.firstName){
         return res.status(400).send({
-            message:"User content cannot be empty"
+            message:"User first name cannot be empty"
         });
-    }*/
+    }else if(!req.body.firstName){
+        return res.status(400).send({
+            message:"User email cannot be empty"
+        });
+    }else if(!req.body.password){
+        return res.status(400).send({
+            message:"User password cannot be empty"
+        });
+    }
 
     //create an User
     const user = new User({
